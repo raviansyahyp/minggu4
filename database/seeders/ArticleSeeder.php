@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
 
 class ArticleSeeder extends Seeder
 {
@@ -13,6 +15,6 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Article::factory()->count(10)->create();
     }
 }

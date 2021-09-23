@@ -21,8 +21,11 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->sentence;
         return [
-            //
+            'title' => $title,
+            'content' => $this->faker->realText(),
+            'image' => $this->faker->imageUrl(640, 480, 'animals', true),
         ];
     }
 }
